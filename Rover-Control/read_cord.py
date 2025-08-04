@@ -4,7 +4,7 @@ import os
 
 # Connect to the vehicle (replace with your connection string)
 # vehicle = connect('127.0.0.1:14551', wait_ready=False)
-vehicle = connect('127.0.0.1:14550', wait_ready=False)
+vehicle = connect('127.0.0.1:14551', wait_ready=False)
 print("connected")
 # vehicle = connect('u', wait_ready=True, baud=57600)
 
