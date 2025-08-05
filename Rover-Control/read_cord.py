@@ -20,12 +20,14 @@ try:
     
         if user_input == 'r':
             location = get_location()
+            i = 1
             lat = location[0]
             lon = location[1]
             alt = location[2]
             file_path = os.path.abspath("cords.txt")
             with open(file_path, "a") as file:
-                file.write(f"{lat}, {lon}, {alt}\n")
+                file.write(f"{i}, {lat}, {lon}, {alt}\n")
+                i += 1
             print(f"[GPS Saved] {lat}, {lon}, {alt}")
             print(f"Wrote to:\n{file_path}\n")
         elif user_input == 'q':
