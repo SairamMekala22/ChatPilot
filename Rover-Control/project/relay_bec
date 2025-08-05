@@ -1,0 +1,26 @@
+import Jetson.GPIO as GPIO
+import time
+
+# Pin number (BCM Mode)
+PIN = 21  # You can change this to any valid GPIO pin for Jetson Nano
+
+# Set GPIO mode
+#GPIO.setmode(GPIO.BOARD)  # Use GPIO.BOARD for physical pin numbering
+GPIO.setmode(GPIO.BCM)  # Alternatively, use BCM mode
+
+# Setup pin as output
+GPIO.setup(PIN, GPIO.OUT)
+
+try:
+    print("Setting pin HIGH")
+    GPIO.output(PIN, GPIO.HIGH)
+    time.sleep(2)
+
+    print("Setting pin LOW")
+    GPIO.output(PIN, GPIO.LOW)
+    time.sleep(2)
+
+finally:
+    print("Cleaning up GPIO...")
+    GPIO.cleanup()
+
