@@ -82,13 +82,13 @@ def turn_left():
     command_right = {
         "T": 10010,
         "id": 2,
-        "cmd": -right,  # reverse polarity for right wheel
+        "cmd": 200,  # reverse polarity for right wheel
         "act": 3
     }
     command_left = {
         "T": 10010,
         "id": 1,
-        "cmd": left,
+        "cmd": 0,
         "act": 3
     }
     ddsm_ser.write((json.dumps(command_right) + '\n').encode())
@@ -104,13 +104,13 @@ def turn_right():
     command_right = {
         "T": 10010,
         "id": 2,
-        "cmd": -right,  # reverse polarity for right wheel
+        "cmd": 0,  # reverse polarity for right wheel
         "act": 3
     }
     command_left = {
         "T": 10010,
         "id": 1,
-        "cmd": left,
+        "cmd": 100,
         "act": 3
     }
     ddsm_ser.write((json.dumps(command_right) + '\n').encode())
