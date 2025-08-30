@@ -246,13 +246,4 @@ def main():
         print("[System] Stopping test...")
         motor_control(0,0)
 
-    # finally:
-    #     vehicle.channels.overrides = {}
-    #     # vehicle.armed = False
-    #     vehicle.close()
-    #     lidar.stop()
-    #     lidar.stop_motor()
-    #     lidar.disconnect()
-    #     ddsm_ser.close()
-
 main()
